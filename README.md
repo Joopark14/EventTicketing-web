@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9155296&assignment_repo_type=AssignmentRepo)
 # Template for project 1
 
 This repository is your group's place to store all files for the implementation phase of Project 1. The Analysis and Design artefacts are still stored on OneDrive, which you have worked with the past weeks.
