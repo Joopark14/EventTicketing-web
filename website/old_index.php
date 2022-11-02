@@ -9,8 +9,12 @@
 
     <p>Here you can implement the functionality needed for project 1</p>
     <p>The table below indicates the status of the dependencies that are neede to run project 1</p>
+    <?php
+            print "Your IP Adress: "; echo $_SERVER['SERVER_ADDR']
+            ?>
     <h3>Status:</h3>
     <div class="status">
+        
         <span>Apache</span><span class="success">Working &#128526</span>
         <span>PHP</span><span class="success">Working &#128526</span>
         <span>Database</span>
@@ -27,6 +31,7 @@
             }
         ?>
     </div>
+
 
 </body>
 </html>

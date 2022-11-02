@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="CSS/bus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet"> 
+<head>
+<title>Ticket Page</title>
+<style>
+
+    .layer{
+
+background-image: url('./img/bus/index.svg');
+}
+.layer_1{
+
+background-image: url('./img/bus/index_1.svg');
+}
+</style>
+
+</head>
+
+
+
+<body>
+    <nav class="nav">
+        <ul class="nav__items">
+            <li class="nav__item"><a href="home.html">Home</a></li>
+            <li class="nav__item"><a href="home.html">About</a></li>
+          </ul> 
+    </nav>
+    
+
+<section  class="header">
+
+    <h1>Welcome to Tickets Fontys Bus Ticket Website</h1>
+    <p>Buy your Bus tickets to many cities in the Netherlands here</p>
+</section>
+
+
+<div class="spacer layer_1"></div>
+
+<section class="drive">
+    <div class="book">
+        <form>
+    
+            <form>
+                <label for="CitiesDeparture">Departure:</label><br>
+                <input list="CitiesDeparture">
+            
+                <datalist id="CitiesDeparture">
+                  <option value="Amsterdam">
+                  <option value="Berlin">
+                  <option value="Breda">
+                  <option value="Rotterdam">
+                  <option value="Venlo">
+                </datalist> 
+                </form>
+                
+                
+                <form>
+                <label for="CitiesArrival">Arrival:</label><br>
+                <input list="CitiesArrival">
+            
+                <datalist id="CitiesArrival">
+                  <option value="Amsterdam">
+                  <option value="Berlin">
+                  <option value="Breda">
+                  <option value="Rotterdam">
+                  <option value="Venlo">
+                </datalist> 
+                </form>
+    </div>
+
+    <div class="button">
+        <button type="button">Book</button>
+    </div>
+    
+</section>
+
+<div class="spacer layer"></div>
+    
+<section class="cities">
+
+    <p>Cities we serve:</p>
+    <ul>
+        <li>Amsterdam</li>
+        <li>Berlin</li>
+        <li>Breda</li>
+        <li>Rotterdam</li>
+        <li>Venlo</li>
+      </ul> 
+    </section>
+
+</body>
+</html>

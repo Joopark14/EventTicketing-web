@@ -1,0 +1,85 @@
+body {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    list-style: none;
+}
+
+  img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: 50%;
+    height: 25%;
+  }
+
+  .nav{
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    height: 70px;
+    line-height: 35px;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  .nav__items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+  }
+
+  .nav__item a{
+    text-decoration: none;
+    color: white;
+    padding: 100%;
+  }
+
+.nav__item a:hover {
+  background-color: rgb(65, 64, 64);
+}
+
+.book{
+
+  display: inline-flex;
+}
+
+.cities{
+  background-color: #00ffff;
+}
+
+
+.header{
+  background-color: blueviolet;
+}
+
+.drive{
+  background-color: #ffebcd;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  padding-top: 50px;
+}
+
+.spacer {
+  aspect-ratio: 960/140;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.button{
+  position: relative;
+  top:50%;
+}

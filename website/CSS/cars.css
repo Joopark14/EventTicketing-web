@@ -1,0 +1,128 @@
+body {
+    background-color: transparent;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* la barra navegadora */
+#navegation ul {
+    list-style-type: none;
+    text-align: center;
+    background-color: black;
+    height: 70px;
+    line-height: 70px;
+}
+
+#navegation li {
+    display: inline;
+    text-align: center;
+    margin: auto;
+}
+
+#navegation li a {
+    padding: 10px 15px 10px 15px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#navegadotion li a:hover {
+    background: color #f39f18;
+    color: #f39f18;
+}
+
+/* la primera caiza*/
+
+.articles{
+    width: 90%;
+}
+
+.article1{
+    position: relative;
+}
+
+h1.article-title {
+    margin: 30px auto 1px;
+    text-align: center;
+    color: black;
+    font-size: 1.5cm;
+}
+
+.mercedes {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0.5em;
+
+}
+
+.mercedesbox {
+
+    border-width: 10px;
+    color: white;
+    padding: 20px 0px 20px 40px;
+    float: center;
+    margin: 6em 4em 4em 4em;
+    display: flex;
+
+}
+
+p.a {
+    text-align: left;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 2em;
+    margin: 20px;
+    font-weight: bold;
+    text-anchor: start;
+}
+
+p.b {
+    text-align: right;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 4em;
+    left: 18em;
+}
+
+.buy_btn {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    border: 1px solid #f39f18;
+    /*anchura, estilo y color borde*/
+    padding: 10px;
+    /*espacio alrededor texto*/
+    background-color: #f39f18;
+    /*color botón*/
+    color: black;
+    /*color texto*/
+    text-decoration: none;
+    /*decoración texto*/
+    text-transform: uppercase;
+    /*capitalización texto*/
+    font-family: 'Permanent marker', cursive;
+    /*tipografía texto*/
+    border-radius: 50em;
+    /*bordes redondos*/
+    font-size: larger;
+    cursor: pointer;
+    cursor: hand;
+    height: min-content;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+article {
+    flex: 1;
+
+}
