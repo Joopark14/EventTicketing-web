@@ -2,5 +2,4 @@
 .env
 .vscode
 .DS_Store
-docker-compose.yml
-*.yml
+docker-compose
