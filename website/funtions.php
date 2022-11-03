@@ -1,14 +1,11 @@
- 
-
 <?php
+
 function call_db($table)
 {
-
+    include "./config.php";
+    include "./pdo.php";
     try {
         $array = [];
-        $username = "prj1_user";
-        $password = "prj1_password";
-        $db = new PDO("pgsql:host=db;port=5432;dbname=prj1", $username, $password);
         $sql = "SELECT * from $table";
         foreach ($db->query($sql) as $row) {
             array_push($array, $row["category_name"]);
