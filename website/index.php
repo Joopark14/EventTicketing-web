@@ -1,3 +1,7 @@
+<?php include "./funtions.php"?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +56,7 @@
             <div class="wrapper">
                 <div class="offers__card-box">
 
-                    <?php $array=array("red","green", "blue", "yellow", "wwweee"); foreach($array as $key=>$value): ?>
+                    <?php $array=call_db("category_table"); foreach($array as $key=>$value): ?>
                             <div class="offers__card" onclick="void(0)">
 
                             <div class="offers__card-img offers__card-img--first">
