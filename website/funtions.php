@@ -2,7 +2,6 @@
 
 function call_db($table)
 {
-    include "./config.php";
     include "./pdo.php";
     try {
         $array = [];
