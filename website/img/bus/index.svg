@@ -1,0 +1,14 @@
+<svg width="960" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_8" d="m-5,0l968.99995,0l0,86l-968.99995,0l0,-43l0,-43z" opacity="undefined" fill="#ffebcd"/>
+  <path id="svg_1" d="m-7,85l968.99995,0l0,57l-968.99995,0l0,-28.5l0,-28.5z" opacity="undefined" fill="#00ffff"/>
+  <path id="svg_3" d="m313.00001,53l179.99989,0l0,60l-179.99989,0l0,-30l0,-30z" opacity="undefined" fill="#00ffff"/>
+  <path id="svg_4" d="m168.00001,52l179.99989,0l0,59l-179.99989,0l0,-29.5l0,-29.5z" opacity="undefined" fill="#00ffff"/>
+  <path id="svg_5" d="m168.00001,52l179.99989,0l0,59l-179.99989,0l0,-29.5l0,-29.5z" opacity="undefined" fill="#00ffff"/>
+  <path id="svg_6" d="m251.00001,37l179.99989,0l0,59l-179.99989,0l0,-29.5l0,-29.5z" opacity="undefined" fill="#00ffff"/>
+  <path id="svg_7" d="m759.00001,53l179.99989,0l0,59l-179.99989,0l0,-29.5l0,-29.5z" opacity="undefined" fill="#00ffff"/>
+  <path id="svg_2" stroke-width="40" stroke="#49aae1" stroke-linecap="round" fill="none" d="m5,87l17.8,-4.7c17.9,-4.6 53.5,-14 89,-16.5c35.5,-2.5 70.9,1.9 106.4,-7.1c35.5,-9 71.1,-31.4 106.8,-37c35.7,-5.7 71.3,5.3 106.8,20c35.5,14.6 70.9,33 106.4,42c35.5,9 71.1,8.6 106.8,4.6c35.7,-4 71.3,-11.6 106.8,-22c35.5,-10.3 70.9,-23.3 106.4,-22.8c35.5,0.5 71.1,14.5 89,21.5l17.8,7"/>
+ </g>
+</svg>
