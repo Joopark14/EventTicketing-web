@@ -1,4 +1,4 @@
-<?php include "./funtions.php"?>
+<?php include "./functions/function.php"?>
 
 
 
@@ -56,7 +56,7 @@
             <div class="wrapper">
                 <div class="offers__card-box">
 
-                    <?php $array=call_db("category_table"); foreach($array as $key=>$value): ?>
+                    <?php $array=call_everything_from_db("category_table"); foreach($array as $key=>$value): ?>
                             <div class="offers__card" onclick="void(0)">
 
                             <div class="offers__card-img offers__card-img--first">

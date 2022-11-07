@@ -16,3 +16,16 @@ function call_db($table)
     }
     return $array;
 }
+
+function add_category($category_name)
+{
+    include "./pdo.php";
+    //SQL constructor
+    if (!$stmt_add_category = $db->prepare("INSERT INTO category_table VALUES(DEFAULT, ?);")) {
+        header("location: ../add_category.php?error=stmtFailed");
+        exit();
+    }
+    $stmt_add_category->execute([$category_name]);
+    header("location: ../add_category.php");
+    exit();
+}
