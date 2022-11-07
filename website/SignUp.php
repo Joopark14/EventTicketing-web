@@ -1,5 +1,5 @@
 <?php
-    include "nav.php"
+    include "./navigation.php"
 ?>
 <link rel="stylesheet" href="./styles/SignUp.css">
     <section class="signup" method="post">
