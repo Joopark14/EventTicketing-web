@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- css source path -->
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="./styles/nav.css">
 </head>
 
 <body>
@@ -35,12 +35,3 @@
     
     <!-- test code  -->
 
-    <div class="" style="height: 100vh;"></div>
-    <div class="" style="height: 100vh;"></div>
-    <div class="" style="height: 100vh;"></div>
-
-
-
-</body>
-
-</html
