@@ -21,8 +21,8 @@
     <nav class="nav">
         <ul class="nav__items wrapper">
             <li class="nav__item nav__item--logo"><a href="#">Tickify</a></li>
-            <li class="nav__item nav__item--cart"><a href="#"><img src="icons/shopping-cart.svg" alt=""></a></li>
-            <li class="nav__item nav__item--user"><img src="icons/user.svg" alt="">
+            <li class="nav__item nav__item--cart"><a href="#"><img src="../img/icons/shopping-cart.svg" alt=""></a></li>
+            <li class="nav__item nav__item--user"><img src="../img/icons/user.svg" alt="">
                 <ul class="nav__dropdown">
                     <li class="nav__dropdown-item"><a href="#">Register</a></li>
                     <li class="nav__dropdown-item"><a href="#">Log in</a>

@@ -12,11 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- font awesome -->
-    <!-- <script src="https://kit.fontawesome.com/f199bb3349.js" crossorigin="anonymous"></script> -->
-
     <!-- css source path -->
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="styles/nav.css">
 </head>
 
 <body>
@@ -24,8 +21,8 @@
     <nav class="nav">
         <ul class="nav__items wrapper">
             <li class="nav__item nav__item--logo"><a href="#">Tickify</a></li>
-            <li class="nav__item nav__item--cart"><a href="#"><img src="icons/shopping-cart.svg" alt=""></a></li>
-            <li class="nav__item nav__item--user"><img src="icons/user.svg" alt="">
+            <li class="nav__item nav__item--cart"><a href="#"><img src="../img/icons/shopping-cart.svg" alt=""></a></li>
+            <li class="nav__item nav__item--user"><img src="../img/icons/user.svg" alt="">
                 <ul class="nav__dropdown">
                     <li class="nav__dropdown-item"><a href="#">Settings</a></li>
                     <li class="nav__dropdown-item"><a href="#">Orders</a>
@@ -43,6 +40,14 @@
     <div class="" style="height: 100vh;"></div>
     <div class="" style="height: 100vh;"></div>
     <div class="" style="height: 100vh;"></div>
+
+
+    <!-- test  -->
+
+
+    <!-- ././  -->
+
+    <!-- ../  -->
 
 
 
