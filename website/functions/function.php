@@ -61,3 +61,38 @@ function createUser($db, $rights, $fullName, $email, $pwd) {
     header("location: ../SignUp.php?error=NONE");
     exit();
 }
+
+//login functions
+function emptyInputLogin($email, $password ){
+    $result = true;
+    if(empty($email) || empty($password)){
+        $result = true;
+    }else{
+        $result = false;
+    }
+
+    return $result;
+}
+
+function loginUser($db, $email, $password){
+    $uidExists = userExists($db, $email);
+
+    if ($uidExists === false ) {
+        header("login: ../login.php?error=wronglogin");
+        exit();
+    }
+
+    $passwordHashed = $uidExists["account_password"];
+    $checkPwd = password_verify($password, $passwordHashed);
+
+    if ($checkPwd === false) {
+        header("login: ../login.php?error=wronglogin");
+        exit();
+    }else if($checkPwd === true ){
+        session_start();
+        $_SESSION["account_id"] = $uidExists["account_id"];
+        $_SESSION["user_name"] = $uidExists["user_name"];
+        header("login: ../index.php");
+        exit();
+    }
+}

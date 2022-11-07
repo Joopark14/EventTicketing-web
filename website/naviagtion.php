@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +27,15 @@
             <li class="nav__item nav__item--cart"><a href="#"><img src="icons/shopping-cart.svg" alt=""></a></li>
             <li class="nav__item nav__item--user"><img src="icons/user.svg" alt="">
                 <ul class="nav__dropdown">
-                    <li class="nav__dropdown-item"><a href="#">Register</a></li>
-                    <li class="nav__dropdown-item"><a href="#">Log in</a>
+                    <?php
+                        if (isset($_SESSION["account_id"])) {
+                            echo "<li class='nav__dropdown-item'><a href='#'>Profile</a></li>";
+                            echo "<li class='nav__dropdown-item'><a href='#'>Log out</a>";
+                        }else{
+                            echo "<li class='nav__dropdown-item'><a href='#'>Register</a></li>";
+                            echo "<li class='nav__dropdown-item'><a href='#'>Log in</a>";
+                        }
+                    ?>
                     </li>
                 </ul>
             </li>
