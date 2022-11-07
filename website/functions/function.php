@@ -1,6 +1,7 @@
 <?php
 
-function emptyInput($rights, $fullName, $email, $pwd, $pwd_repeat) {
+function emptyInput($rights, $fullName, $email, $pwd, $pwd_repeat)
+{
     if (empty($rights) || empty($fullName) || empty($email) || empty($pwd) || empty($pwd_repeat)) {
         return true;
     } else {
@@ -8,35 +9,49 @@ function emptyInput($rights, $fullName, $email, $pwd, $pwd_repeat) {
     }
 }
 
-function invalidName($fullName) {
+function emptyField($input)
+{
+    if (empty($input)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function invalidName($fullName)
+{
     if (!preg_match("/^[a-zA-Z0-9_ -]*$/", $fullName)) {
         return true;
     }
     return false;
 }
 
-function invalidEmail($email) {
+function invalidEmail($email)
+{
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         return true;
     }
     return false;
 }
 
-function pwdMatch($pwd, $pwd_repeat) {
+function pwdMatch($pwd, $pwd_repeat)
+{
     if ($pwd !== $pwd_repeat) {
         return true;
     }
     return false;
 }
 
-function userExists($db, $email) {
+function userExists($email)
+{
+    include "./pdo.php";
     
-    if (!$stm = $db -> prepare("SELECT e_mail FROM account_table WHERE e_mail=?")) {
+    if (!$stm = $db->prepare("SELECT e_mail FROM account_table WHERE e_mail=?")) {
         header("location: ../SignUp.php?error=stmtFailed");
         exit();
     }
 
-    $stm -> execute([$email]);
+    $stm->execute([$email]);
     $result = $stm->fetchAll();
 
     if ($result) {
@@ -45,12 +60,12 @@ function userExists($db, $email) {
     } else {
         return false;
     }
-
-
 }
 
-function createUser($db, $rights, $fullName, $email, $pwd) {
+function createUser($rights, $fullName, $email, $pwd)
+{
 
+    include "./pdo.php";
     if (!$stmt_create_acc = $db->prepare("INSERT INTO account_table VALUES(DEFAULT, ?, ?, ?, ?);")) {
         header("location: ../SignUp.php?error=stmtFailed");
         exit();
@@ -65,17 +80,12 @@ function createUser($db, $rights, $fullName, $email, $pwd) {
 function call_everything_from_db($table)
 {
     include "./pdo.php";
-    try {
-        $array = [];
-        $sql = "SELECT $name from $table";
-        foreach ($db->query($sql) as $row) {
-            array_push($array, $row["category_name"]);
-        }
-    } catch (PDOException $e) {
-        print('<span class="error">Not working &#128557</span>');
-        print('<span>Error message</span>');
-        print('<pre class="error">' . $e->getMessage() . '</pre>');
+    $array = [];
+    $sql = "SELECT * from $table";
+    foreach ($db->query($sql) as $row) {
+        array_push($array, $row["category_name"]);
     }
+
     return $array;
 }
 
@@ -84,10 +94,8 @@ function add_category($category_name)
     include "./pdo.php";
     //SQL constructor
     if (!$stmt_add_category = $db->prepare("INSERT INTO category_table VALUES(DEFAULT, ?);")) {
-        header("location: ../add_category.php?error=stmtFailed");
         exit();
     }
     $stmt_add_category->execute([$category_name]);
-    header("location: ../add_category.php");
     exit();
 }
