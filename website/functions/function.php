@@ -40,7 +40,7 @@ function userExists($db, $email) {
     $result = $stm->fetch();
 
     if ($result) {
-        echo $result[2];
+       // echo $result[2];
         return $result;
     } else {
         return false;
@@ -74,9 +74,9 @@ function emptyInputLogin($email, $password ){
     return $result;
 }
 
-function loginUser($db, $email, $password){
+function loginUser($db, $email, $pwdUser){
     $uidExists = userExists($db, $email);
-    echo $uidExists[3];
+   // echo $uidExists[3];
 
     if ($uidExists === false ) {
         header("location: ../login.php?error=wronglogin1");
@@ -84,7 +84,17 @@ function loginUser($db, $email, $password){
     }
 
     $passwordHashed = $uidExists[3];
-    $checkPwd = password_verify($password, $passwordHashed);
+    $checkPwd = password_verify($pwdUser, $passwordHashed);
+   
+    // if(password_verify($pwdUser, $passwordHashed)){
+    //     echo "YESSSS!!!!";
+        
+    // }else{
+    //     echo "NOOOOOO!!!!";
+    //     echo $passwordHashed;//pass is there
+    //     echo $pwdUser;//postgresss !!!!!!!!!!!!!!!! maikati da eba 
+        
+    // }
 
     if ($checkPwd === false) {
         header("location: ../login.php?error=wrongPassword");
