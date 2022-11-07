@@ -1,0 +1,42 @@
+.signup {
+    width: 50vh;
+    padding: 25px;
+    background-color: #003459;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+body {
+    background-color: rgb(52, 52, 52);
+}
+section input{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    margin: 10px;
+}
+
+section button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    width: 40%;
+    height: 40px;
+}
+label {
+    width: 100%;
+    display: block;
+}
+
+select {
+    width: 80%;
+    height: 40px;
+    border: 2px solid #ccc;
+    margin: 10px;
+}

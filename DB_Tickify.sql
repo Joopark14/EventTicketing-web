@@ -81,4 +81,4 @@ foreign key (past_order_id) references past_orders_table(past_order_id)
 
 --rights can be
 alter table account_table
-	add check (account_access = 'customer' and account_access = 'organizer'  and account_access = 'administrator');
+	add check (account_access = 'customer' or account_access = 'organizer'  or account_access = 'administrator');
