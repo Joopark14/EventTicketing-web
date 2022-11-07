@@ -31,16 +31,16 @@ function pwdMatch($pwd, $pwd_repeat) {
 
 function userExists($db, $email) {
     
-    if (!$stm = $db -> prepare("SELECT e_mail FROM account_table WHERE e_mail=?")) {
+    if (!$stm = $db -> prepare("SELECT * FROM account_table WHERE e_mail=?")) {
         header("location: ../SignUp.php?error=stmtFailed");
         exit();
     }
 
     $stm -> execute([$email]);
-    $result = $stm->fetchAll();
+    $result = $stm->fetch();
 
     if ($result) {
-        echo $result;
+        echo $result[2];
         return $result;
     } else {
         return false;
@@ -76,25 +76,28 @@ function emptyInputLogin($email, $password ){
 
 function loginUser($db, $email, $password){
     $uidExists = userExists($db, $email);
+    echo $uidExists[3];
 
     if ($uidExists === false ) {
-        header("login: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=wronglogin1");
         exit();
     }
 
-    $passwordHashed = $uidExists["account_password"];
+    $passwordHashed = $uidExists[3];
     $checkPwd = password_verify($password, $passwordHashed);
 
     if ($checkPwd === false) {
-        header("login: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=wrongPassword");
         exit();
     }else if($checkPwd === true ){
         session_start();
         $_SESSION["account_id"] = $uidExists["account_id"];
         $_SESSION["user_name"] = $uidExists["user_name"];
-        header("login: ../index.php");
+        header("location: ../index.php");
+        include "nav-logged.php";
         exit();
     }
+
 }
 function call_everything_from_db($table)
 {

@@ -3,3 +3,4 @@
 .vscode
 .DS_Store
 docker-compose
+website/functions/dbConn.php
