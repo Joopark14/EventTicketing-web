@@ -1,6 +1,6 @@
 <?php
 include "navigation.php";
-session_start();
+
 ?>
 
 <link rel="stylesheet" href="./styles/login.css">
