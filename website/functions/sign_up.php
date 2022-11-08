@@ -1,5 +1,4 @@
 <?php
-include_once "dbConn.php";
 include "function.php";
 
 if (isset($_POST["submit"])) {
@@ -27,12 +26,12 @@ if (isset($_POST["submit"])) {
         header("location: ../SignUp.php?error=pwdDoNotMatch");
         exit();
     }
-    if (userExists($db, $email) !==false) {
+    if (userExists($email) !==false) {
         header("location: ../SignUp.php?error=userExists");
         exit();
     }
 
-    createUser($db, $rights, $fullName, $email, $pwd);
+    createUser($rights, $fullName, $email, $pwd);
 
 } else {
     header("location: ../SignUp.php");
