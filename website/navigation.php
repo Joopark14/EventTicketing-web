@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if (!isset($_SESSION["userId"])){
+    if (!isset($_SESSION["account_id"])){
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
             <li class="nav__item nav__item--user"><img src="../img/icons/user.svg" alt="">
                 <ul class="nav__dropdown">
                     <li class="nav__dropdown-item"><a href="./SignUp.php">Register</a></li>
-                    <li class="nav__dropdown-item"><a href="#">Log in</a>
+                    <li class="nav__dropdown-item"><a href="./login.php">Log in</a>
                     </li>
                 </ul>
             </li>

@@ -89,7 +89,7 @@ function emptyInputLogin($email, $password ){
 }
 
 function loginUser($db, $email, $pwdUser){
-    $uidExists = userExists($db, $email);
+    $uidExists = userExists($email);
    // echo $uidExists[3];
 
     if ($uidExists === false ) {
