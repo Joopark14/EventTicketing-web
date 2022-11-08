@@ -92,7 +92,7 @@ function loginUser($db, $email, $pwdUser){
     // }else{
     //     echo "NOOOOOO!!!!";
     //     echo $passwordHashed;//pass is there
-    //     echo $pwdUser;//postgresss !!!!!!!!!!!!!!!! maikati da eba 
+    //     echo $pwdUser;//postgresss !!!!!!!!!!!!!!!! 
         
     // }
 
