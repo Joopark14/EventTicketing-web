@@ -46,16 +46,15 @@ function userExists($email)
 {
     include "./pdo.php";
     
-    if (!$stm = $db->prepare("SELECT e_mail FROM account_table WHERE e_mail=?")) {
+    if (!$stm = $db->prepare("SELECT * FROM account_table WHERE e_mail=?")) {
         header("location: ../SignUp.php?error=stmtFailed");
         exit();
     }
 
     $stm->execute([$email]);
-    $result = $stm->fetchAll();
+    $result = $stm->fetch();
 
     if ($result) {
-        echo $result;
         return $result;
     } else {
         return false;
