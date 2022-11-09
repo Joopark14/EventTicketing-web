@@ -24,6 +24,10 @@ body {
   max-width: 1200px;
 }
 
+.nav-desktop {
+  display: none;
+}
+
 .nav {
   position: -webkit-sticky;
   position: sticky;
@@ -66,6 +70,11 @@ body {
   background-color: #212125;
 }
 
+.nav__item--user i {
+  color: #fff;
+  font-size: 3rem;
+}
+
 .nav__item--user:hover .nav__dropdown-item {
   display: block;
 }
@@ -88,10 +97,6 @@ body {
   color: #fff;
   -webkit-transition: color .3s;
   transition: color .3s;
-}
-
-.nav__item a:hover {
-  color: #4169E1;
 }
 
 .nav__item--logo a {
@@ -185,18 +190,39 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .nav__item--user {
-    width: 250px;
+  .nav-mobile {
+    display: none;
   }
-  .nav__item--cart a {
-    padding: 1em 3em;
+  .nav-desktop {
+    display: block;
+  }
+  .nav__item {
+    color: #fff;
   }
   .nav__item--logo a {
-    padding: 1em 0em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  .nav__item--logo span {
     font-size: 2.5rem;
   }
-  .nav__dropdown {
-    width: 250px;
+  .nav__item--logo i {
+    margin-right: 5px;
+    font-size: 30px;
+  }
+  .nav__item--cart:hover {
+    background-color: transparent;
+  }
+  .nav__item a:hover {
+    color: #4169E1;
   }
 }
 /*# sourceMappingURL=nav.css.map */
