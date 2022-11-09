@@ -15,19 +15,25 @@ body {
     background-color: rgb(52, 52, 52);
 }
 section input{
-    width: 80%;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid #ccc;
-    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 0;
+    outline: none;
+    background-color: transparent;
 }
 
 section button{
-    display: block;
+    /* display: block;
     margin: auto;
     margin-top: 25px;
     width: 40%;
-    height: 40px;
+    height: 40px; */
+    width: 85%;
+    padding: 10px 30px;
 }
 label {
     width: 100%;

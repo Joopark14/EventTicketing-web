@@ -11,8 +11,7 @@ include "navigation.php";
             <h2>login</h2>
             <input type="text" name="uid" required placeholder="enter name">
             <input type="password" name="pwd" required placeholder="enter password">
-
-            <input type="submit" name="submit">
+            <button type="submit" name="submit">Sign Up</button>
         </form>
 
     </div>
