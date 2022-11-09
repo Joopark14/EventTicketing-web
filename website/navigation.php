@@ -1,8 +1,8 @@
 <?php 
     session_start();
     if (!isset($_SESSION["account_id"])){
+        if(){
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +40,9 @@
             </li>
         </ul>
     </nav>
-
+<?php
+        }else if () {
+?>
     <!-- navigation for desktop devices -->
 
     <nav class="nav nav-desktop">
@@ -60,7 +62,9 @@
     <!-- test code  -->
 
 <?php
+        }
     } else {
+        if () {
 ?>
 
 <!DOCTYPE html>
@@ -83,6 +87,9 @@
 
 <body>
 
+<?php
+        }else if (){
+?>
     <!-- navigation for mobile devices  -->
 
     <nav class="nav nav-mobile">
@@ -91,23 +98,11 @@
             <li class="nav__item nav__item--cart"><a href="#"><i class="material-icons">add_shopping_cart</i></a></li>
             <li class="nav__item nav__item--user"><i class="material-icons">person</i>
                 <ul class="nav__dropdown">
-                    <li class="nav__dropdown-item"><a href="#">Register</a></li>
-                    <li class="nav__dropdown-item"><a href="#">Log in</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- navigation for desktop devices -->
-
-    <nav class="nav nav-desktop">
-        <ul class="nav__items wrapper">
-            <li class="nav__item nav__item--logo"><a href="#"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
-            <li class="nav__item nav__item--cart"><a href="#">Cart</a></li>
-            <li class="nav__item nav__item--user"><a href="#">Account</a>
-                <ul class="nav__dropdown">
-                    <li class="nav__dropdown-item"><a href="#">Register</a></li>
-                    <li class="nav__dropdown-item"><a href="#">Log in</a></li>
+                    <li class="nav__dropdown-item"><a href="#">Settings</a></li>
+                    <li class="nav__dropdown-item"><a href="#">Orders</a>
+                    <li class="nav__dropdown-item"><a href="#">Cards</a>
+                    <li class="nav__dropdown-item"><a href="#">Log out</a>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -127,4 +122,7 @@
     <!-- ././  -->
 
     <!-- ../  -->
-<?php }
+<?php
+        }
+    }
+?>
