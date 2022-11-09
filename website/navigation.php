@@ -73,7 +73,7 @@
                     <li class="nav__dropdown-item"><a href="#">Settings</a></li>
                     <li class="nav__dropdown-item"><a href="#">Orders</a>
                     <li class="nav__dropdown-item"><a href="#">Cards</a>
-                    <li class="nav__dropdown-item"><a href="#">Log out</a>
+                    <li class="nav__dropdown-item"><a href="./functions/LogOut.php">Log out</a>
                     </li>
                 </ul>
             </li>

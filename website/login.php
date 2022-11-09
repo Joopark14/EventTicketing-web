@@ -3,19 +3,21 @@ include "navigation.php";
 
 ?>
 
-<link rel="stylesheet" href="./styles/login.css">
+<link rel="stylesheet" href="./styles/SignUp.css">
 
+<section class="signup">
+    <div class="form-container">
+        <form action="./functions/login_function.php" method="post">
+            <h2>login</h2>
+            <input type="text" name="uid" required placeholder="enter name">
+            <input type="password" name="pwd" required placeholder="enter password">
 
-<div class="form-container">
-    <form action="./functions/login_function.php" method="post">
-        <h2>login</h2>
-        <input type="text" name="uid" required placeholder="enter name">
-        <input type="password" name="pwd" required placeholder="enter password">
+            <input type="submit" name="submit">
+        </form>
 
-        <input type="submit" name="submit">
-    </form>
+    </div>
+</section>
 
-</div>
 
 </body>
 
