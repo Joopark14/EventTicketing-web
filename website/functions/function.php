@@ -106,6 +106,8 @@ function loginUser($email, $pwdUser){
         session_start();
         $_SESSION["account_id"] = $uidExists["account_id"];
         $_SESSION["user_name"] = $uidExists["user_name"];
+        $_SESSION["e_mail"] = $uidExists["e_mail"];
+        $_SESSION["rights"] = $uidExists["account_access"];
         header("location: ../index.php");
         include "nav-logged.php";
         exit();

@@ -1,8 +1,8 @@
 <?php 
     session_start();
     if (!isset($_SESSION["account_id"])){
+        if(){
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,21 +17,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+     <!-- css fonts source -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- css source path -->
     <link rel="stylesheet" href="./styles/nav.css">
 </head>
 
 <body>
 
-    <nav class="nav">
+    <!-- navigation for mobile devices - not logged in users -->
+
+    <nav class="nav nav-mobile">
         <ul class="nav__items wrapper">
-            <li class="nav__item nav__item--logo"><a href="./index.php">Tickify</a></li>
-            <li class="nav__item nav__item--cart"><a href="#"><img src="../img/icons/shopping-cart.svg" alt=""></a></li>
-            <li class="nav__item nav__item--user"><img src="../img/icons/user.svg" alt="">
+            <li class="nav__item nav__item--logo"><a href="#">Tickify</a></li>
+            <li class="nav__item nav__item--cart"><a href="#"><i class="material-icons">add_shopping_cart</i></a></li>
+            <li class="nav__item nav__item--user"><i class="material-icons">person</i>
                 <ul class="nav__dropdown">
-                    <li class="nav__dropdown-item"><a href="./SignUp.php">Register</a></li>
-                    <li class="nav__dropdown-item"><a href="./login.php">Log in</a>
-                    </li>
+                    <li class="nav__dropdown-item"><a href="#">Register</a></li>
+                    <li class="nav__dropdown-item"><a href="#">Log in</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<?php
+        }else if () {
+?>
+    <!-- navigation for desktop devices - not logged in users -->
+
+    <nav class="nav nav-desktop">
+        <ul class="nav__items wrapper">
+            <li class="nav__item nav__item--logo"><a href="#"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
+            <li class="nav__item nav__item--cart"><a href="#">Cart</a></li>
+            <li class="nav__item nav__item--user"><a href="#">Account</a>
+                <ul class="nav__dropdown">
+                    <li class="nav__dropdown-item"><a href="#">Register</a></li>
+                    <li class="nav__dropdown-item"><a href="#">Log in</a></li>
                 </ul>
             </li>
         </ul>
@@ -41,7 +62,9 @@
     <!-- test code  -->
 
 <?php
+        }
     } else {
+        if () {
 ?>
 
 <!DOCTYPE html>
@@ -64,17 +87,38 @@
 
 <body>
 
-    <nav class="nav">
+<?php
+        }else if (){
+?>
+    <!-- navigation for mobile devices - logged in users  -->
+
+    <nav class="nav nav-mobile">
         <ul class="nav__items wrapper">
             <li class="nav__item nav__item--logo"><a href="#">Tickify</a></li>
-            <li class="nav__item nav__item--cart"><a href="#"><img src="../img/icons/shopping-cart.svg" alt=""></a></li>
-            <li class="nav__item nav__item--user"><img src="../img/icons/user.svg" alt="">
+            <li class="nav__item nav__item--cart"><a href="#"><i class="material-icons">add_shopping_cart</i></a></li>
+            <li class="nav__item nav__item--user"><i class="material-icons">person</i>
                 <ul class="nav__dropdown">
                     <li class="nav__dropdown-item"><a href="#">Settings</a></li>
                     <li class="nav__dropdown-item"><a href="#">Orders</a>
                     <li class="nav__dropdown-item"><a href="#">Cards</a>
-                    <li class="nav__dropdown-item"><a href="./functions/LogOut.php">Log out</a>
+                    <li class="nav__dropdown-item"><a href="#">Log out</a>
                     </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- navigation for desktop devices - logged in users -->
+
+    <nav class="nav nav-desktop">
+        <ul class="nav__items wrapper">
+            <li class="nav__item nav__item--logo"><a href="#"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
+            <li class="nav__item nav__item--cart"><a href="#">Cart</a></li>
+            <li class="nav__item nav__item--user"><a href="#">Account</a>
+                <ul class="nav__dropdown">
+                    <li class="nav__dropdown-item"><a href="#">Orders</a></li>
+                    <li class="nav__dropdown-item"><a href="#">Settings</a></li>
+                    <li class="nav__dropdown-item"><a href="#">Cards</a></li>z
                 </ul>
             </li>
         </ul>
@@ -94,4 +138,7 @@
     <!-- ././  -->
 
     <!-- ../  -->
-<?php }
+<?php
+        }
+    }
+?>
