@@ -1,39 +1,46 @@
 .signup {
     width: 50vh;
-    padding: 25px;
-    background-color: #003459;
+    padding: 25px 25px 25px 25px;
+    background-color: #fff;
     border-radius: 20px;
     text-align: center;
     margin: auto;
     margin-top: 100px;
     font-family: Arial, sans-serif;
     font-size: 20px;
-    color: white;
-}
+    color: #00171f;
+}   
 
 body {
-    background-color: rgb(52, 52, 52);
+    background-color: #00171f;
 }
 section input{
     width: 100%;
     padding: 10px;
     margin: 5px;
-    border-left: 0;
+    border-left: 1px;
     border-right: 0;
-    border-bottom: 1px solid #ccc;
-    border-top: 0;
+    border-bottom: 1px solid #00171f;
+    border-top: 1px;
     outline: none;
+    color: #000;
     background-color: transparent;
 }
 
 section button{
-    /* display: block;
-    margin: auto;
-    margin-top: 25px;
-    width: 40%;
-    height: 40px; */
     width: 85%;
-    padding: 10px 30px;
+    padding: 10px 30px ;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background: linear-gradient(to right, #007ea7,orangered);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
 }
 label {
     width: 100%;
@@ -41,12 +48,19 @@ label {
 }
 
 select {
-    width: 80%;
-    height: 40px;
-    border: 2px solid #ccc;
-    margin: 10px;
+    width: 75%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00171f;
+    outline: none;
+    background-color: transparent;
+    color: #00171f;
 }
 
+
+
 .error {
-    color: rgb(255, 116, 57);
+    color: 00171f;
+    
 }

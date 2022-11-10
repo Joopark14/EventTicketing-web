@@ -10,8 +10,13 @@ if(isset($_POST["submit"])){
     if (emptyInputLogin($email,$pwdUser) !== false) {
         header("location: ../login.php?error=emptyInput");
         exit();
+   
+    }else if(loginUser($email, $pwdUser) !== false){
+        header("location: ../login.php?=invalidPassword");
+        exit();
     }
-    loginUser($db, $email, $pwdUser);
+
+    loginUser($email, $pwdUser);
 
 }else{
     header("location: ../login.php");

@@ -88,30 +88,19 @@ function emptyInputLogin($email, $password ){
     return $result;
 }
 
-function loginUser($db, $email, $pwdUser){
+function loginUser($email, $pwdUser){
     $uidExists = userExists($email);
-   // echo $uidExists[3];
 
     if ($uidExists === false ) {
-        header("location: ../login.php?error=wronglogin1");
+        header("location: ../login.php?error=invalidEmail");
         exit();
     }
 
     $passwordHashed = $uidExists[3];
     $checkPwd = password_verify($pwdUser, $passwordHashed);
-   
-    // if(password_verify($pwdUser, $passwordHashed)){
-    //     echo "YESSSS!!!!";
-        
-    // }else{
-    //     echo "NOOOOOO!!!!";
-    //     echo $passwordHashed;//pass is there
-    //     echo $pwdUser;//postgresss !!!!!!!!!!!!!!!! 
-        
-    // }
 
     if ($checkPwd === false) {
-        header("location: ../login.php?error=wrongPassword");
+        header("location: ../login.php?error=invalidPassword");
         exit();
     }else if($checkPwd === true ){
         session_start();
