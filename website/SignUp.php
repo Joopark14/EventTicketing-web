@@ -30,6 +30,8 @@
                         echo "<p>There is already an account using this email.</p>";
                     } else if ($_GET["error"] == "stmtFailed") {
                         echo "<p>There was an unexpected error.<br>Please try again.</p>";
+                    } else if ($_GET["error"] == "NONE") {
+                        echo "<p>Sign Up Successfull!</p>";
                     }
                 }
             ?>
