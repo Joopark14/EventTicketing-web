@@ -70,7 +70,7 @@
             <li class="nav__item nav__item--cart"><a href="#"><img src="../img/icons/shopping-cart.svg" alt=""></a></li>
             <li class="nav__item nav__item--user"><img src="../img/icons/user.svg" alt="">
                 <ul class="nav__dropdown">
-                    <li class="nav__dropdown-item"><a href="#">Settings</a></li>
+                    <li class="nav__dropdown-item"><a href="./account_details.php">Settings</a></li>
                     <li class="nav__dropdown-item"><a href="#">Orders</a>
                     <li class="nav__dropdown-item"><a href="#">Cards</a>
                     <li class="nav__dropdown-item"><a href="./functions/LogOut.php">Log out</a>
@@ -83,9 +83,6 @@
     
     <!-- test code  -->
 
-    <div class="" style="height: 100vh;"></div>
-    <div class="" style="height: 100vh;"></div>
-    <div class="" style="height: 100vh;"></div>
 
 
     <!-- test  -->
