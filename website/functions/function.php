@@ -129,6 +129,7 @@ function call_everything_from_db($table)
 function add_category($category_name)
 {
     include "/var/www/html/functions/pdo.php";
+    
     //SQL constructor
     if (!$stmt_add_category = $db->prepare("INSERT INTO category_table VALUES(DEFAULT, ?);")) {
         exit();
