@@ -4,6 +4,8 @@ category_name varchar(255),
 primary key (category_id)
 );
 
+INSERT INTO category_table (category_id, category_name) VALUES (generate_series(1, 1000), trunc(random()*10 * 2 + 10));
+
 create table account_table(
 account_id serial,
 user_name varchar(255),
