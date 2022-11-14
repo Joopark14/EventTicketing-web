@@ -163,7 +163,7 @@
             <li class="nav__item nav__item--user"><a href="#">Account</a>
                 <ul class="nav__dropdown">
                     <li class="nav__dropdown-item"><a href="#">Orders</a></li>
-                    <li class="nav__dropdown-item"><a href="#">Settings</a></li>
+                    <li class="nav__dropdown-item"><a href="./account_details.php">Settings</a></li>
                     <li class="nav__dropdown-item"><a href="#">Cards</a></li>
                     <li class="nav__dropdown-item"><a href="./functions/LogOut.php">Log out</a></li>
                 </ul>
