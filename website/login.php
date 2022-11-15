@@ -16,7 +16,7 @@ include "navigation.php";
             <?php 
                 if(isset($_GET["error"])){
                     if($_GET["error"] == "emptyInput"){
-                        echo '<p class="error">Fields have to be filled!</p>';
+                        echo '<p class="error">Empty fields detected!</p>';
                     }else if($_GET["error"] == "invalidEmail"){
                         echo '<p class="error">Invalid Email!</p>';
                     }
