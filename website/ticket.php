@@ -1,26 +1,36 @@
 <?php
 include "navigation.php";
+include "./functions/pdo.php";
 
 ?>
 
 <link rel="stylesheet" href="./styles/ticket.css">
 
 <section class="ticket">
-    <div class="ticket-container">
-        <form action="./functions/function.php" method="post">
-            <h2 class="text_style">seats</h2>
-            <h2 class="text_style">event name</h2>
-            <h2 class="text_style">short description</h2>
-            <h2 class="text_style">time of event</h2>
-           
+    <?php
+    $sql = "SELECT * FROM ticket_category_table WHERE event_id = " . $_POST["event_cat"] . ";";
+    $stmt = $db->query($sql);
+    $lastid = null;
+    while ($row = $stmt->fetch()) {
+        echo "<div class='ticket-container'>";
+        echo "<form action='??????' method='post'>";
+        echo "<p class='text'>$row[0]</p>";
+        echo "<p class='text'>$row[1]</p>";
+        echo "<p class='text'>$row[2]</p>";
+        echo "<p class='text'>$row[3]</p>";
+        echo "<p class='text'>$row[4]</p>";
+        echo '</form> </div>';
+    }
+    ?>
 
-            <button type="submit" name="check_out">check_out</button>
-            
-        </form>
+    <!-- <button type="submit" name="check_out">check_out</button> -->
 
-       
-    </div>
 </section>
+
+<div>
+
+
+</div>
 
 
 </body>
