@@ -68,7 +68,7 @@
     </head>
     <nav class="nav nav-desktop">
         <ul class="nav__items wrapper">
-            <li class="nav__item nav__item--logo"><a href="#"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
+            <li class="nav__item nav__item--logo"><a href="index.php"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
             <li class="nav__item nav__item--cart"><a href="#">Cart</a></li>
             <li class="nav__item nav__item--user"><a href="#">Account</a>
                 <ul class="nav__dropdown">
@@ -158,7 +158,7 @@
     <body>
     <nav class="nav nav-desktop">
         <ul class="nav__items wrapper">
-            <li class="nav__item nav__item--logo"><a href="#"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
+            <li class="nav__item nav__item--logo"><a href="index.php"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
             <li class="nav__item nav__item--cart"><a href="#">Cart</a></li>
             <li class="nav__item nav__item--user"><a href="#">Account</a>
                 <ul class="nav__dropdown">
