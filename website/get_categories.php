@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- css source  -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
 
 </head>
 
