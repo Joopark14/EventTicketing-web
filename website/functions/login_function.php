@@ -4,7 +4,6 @@ if(isset($_POST["submit"])){
     $email = $_POST["uid"];
     $pwdUser = $_POST["pwd"];
 
-    require_once 'pdo.php';
     require_once 'function.php';
     
     if (emptyInputLogin($email,$pwdUser) !== false) {

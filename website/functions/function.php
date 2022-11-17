@@ -136,3 +136,16 @@ function add_category($category_name)
     $stmt_add_category->execute([$category_name]);
     exit();
 }
+
+function buy_ticket(){
+    
+    include "./pdo.php";
+
+    $sql = "UPDATE ticket_category_table SET quantity = quantity - 1";
+    $db->query($sql);
+    
+    header("location: ../index.php");
+    exit();
+
+
+}
