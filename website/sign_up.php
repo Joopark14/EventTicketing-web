@@ -1,7 +1,7 @@
 <?php
     include "./navigation.php"
 ?>
-<link rel="stylesheet" href="./styles/SignUp.css">
+<link rel="stylesheet" href="./styles/sign_up.css">
     <section class="signup" method="post">
         <h2>SIGN UP</h2>
         <form action="./functions/sign_up.php" method=post>

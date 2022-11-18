@@ -1,11 +1,12 @@
 .signup {
     width: 50vh;
+    max-width: 90%;
     padding: 25px 25px 25px 25px;
     background-color: #fff;
     border-radius: 20px;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 18%;
     font-family: Arial, sans-serif;
     font-size: 20px;
     color: #00171f;

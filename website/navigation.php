@@ -33,10 +33,10 @@
     <nav class="nav nav-mobile">
         <ul class="nav__items wrapper">
             <li class="nav__item nav__item--logo"><a href="index.php">Tickify</a></li>
-            <li class="nav__item nav__item--cart"><a href="#"><i class="material-icons">add_shopping_cart</i></a></li>
+            <li class="nav__item nav__item--cart"><a href="sign_up.php"><i class="material-icons">add_shopping_cart</i></a></li>
             <li class="nav__item nav__item--user"><i class="material-icons">person</i>
                 <ul class="nav__dropdown">
-                    <li class="nav__dropdown-item"><a href="SignUp.php">Register</a></li>
+                    <li class="nav__dropdown-item"><a href="sign_up.php">Register</a></li>
                     <li class="nav__dropdown-item"><a href="login.php">Log in</a></li>
                 </ul>
             </li>
@@ -70,9 +70,9 @@
         <ul class="nav__items wrapper">
             <li class="nav__item nav__item--logo"><a href="index.php"><i class="material-icons">check_circle</i><span>Tickify</span></a></li>
             <li class="nav__item nav__item--cart"><a href="#">Cart</a></li>
-            <li class="nav__item nav__item--user"><a href="#">Account</a>
+            <li class="nav__item nav__item--user"><a href="sign_up.php">Account</a>
                 <ul class="nav__dropdown">
-                    <li class="nav__dropdown-item"><a href="SignUp.php">Register</a></li>
+                    <li class="nav__dropdown-item"><a href="sign_up.php">Register</a></li>
                     <li class="nav__dropdown-item"><a href="login.php">Log in</a></li>
                 </ul>
             </li>
