@@ -1,6 +1,6 @@
 <?php
     include "navigation.php";
-
+    include "./functions/pdo.php";
 ?>
 <head>
         <meta charset="UTF-8">
@@ -46,17 +46,26 @@
 
                 <h2 class="section-title">Events</h2>
 
+
                 <div class="events__cards-box">
 
-                    <div class="events__card">
-                        <div class="events__card-img events__card-img--first">
+                <?php 
+                        $sql = "SELECT * FROM category_table;";
+                        $result = $db->query($sql);
+                        while($row = $result->fetch()) {
+                            echo "<div class='events__card'>
+                                <div class='events__card-img events__card-img--first'>
+    
+                                    <h3 class='events__card-title'>".$row[1]."</h3>
+    
+                                    <a href='#'><button class='events__card-btn'>Details</button></a>
+    
+                                </div>
+                            </div> ";
+                        }
+                    ?>
 
-                            <h3 class="events__card-title">Sports</h3>
 
-                            <a href="#"><button class="events__card-btn">Details</button></a>
-
-                        </div>
-                    </div>
 
                 </div>
             </div>
