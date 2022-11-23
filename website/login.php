@@ -3,7 +3,7 @@ include "navigation.php";
 
 ?>
 
-<link rel="stylesheet" href="./styles/SignUp.css">
+<link rel="stylesheet" href="./styles/sign_up.css">
 
 <section class="signup">
     <div class="form-container">
