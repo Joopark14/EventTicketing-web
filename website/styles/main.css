@@ -51,7 +51,7 @@ body {
 	-ms-flex-align: center;
 	align-items: center;
 	height: calc(100vh - 70px);
-	background-image: '../../img/football-events-lg.jpeg';
+	background-image: url('../img/header-bcg-lg.jpeg');
 	background-position: center;
 	background-size: cover;
 }
