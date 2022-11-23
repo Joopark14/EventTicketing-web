@@ -109,7 +109,6 @@ function loginUser($email, $pwdUser){
         $_SESSION["e_mail"] = $uidExists["e_mail"];
         $_SESSION["rights"] = $uidExists["account_access"];
         header("location: ../index.php");
-        include "nav-logged.php";
         exit();
     }
 
@@ -147,5 +146,17 @@ function buy_ticket(){
     header("location: ../index.php");
     exit();
 
+
+}
+
+function ticket_to_cart($add_this){
+    include "./pdo.php";
+    session_start();
+
+    $sql = "INSERT INTO cart_table values(".$add_this.", ".$_SESSION["account_id"].", 1);";
+    $db->query($sql);
+    
+    header("location: ../index.php");
+    exit();
 
 }

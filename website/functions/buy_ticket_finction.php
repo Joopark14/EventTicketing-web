@@ -1,9 +1,11 @@
-<?php 
+<?php
 
-    require_once 'function.php';
-    
-    buy_ticket();
-    
-    header("location: ../ticket_category.php");
-    exit(); 
-    
+include 'function.php';
+session_start();
+
+if (!isset($_SESSION["account_id"])) {
+    header("location: ../login.php?".session_status()."");
+    exit();
+} else {
+    ticket_to_cart($_POST["add_to_cart"]);
+}
