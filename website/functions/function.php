@@ -45,7 +45,7 @@ function pwdMatch($pwd, $pwd_repeat)
 function userExists($email)
 {
     include "./pdo.php";
-    
+
     if (!$stm = $db->prepare("SELECT * FROM account_table WHERE e_mail=?")) {
         header("location: ../SignUp.php?error=stmtFailed");
         exit();
@@ -77,21 +77,23 @@ function createUser($rights, $fullName, $email, $pwd)
 }
 
 //login functions
-function emptyInputLogin($email, $password ){
+function emptyInputLogin($email, $password)
+{
     $result = true;
-    if(empty($email) || empty($password)){
+    if (empty($email) || empty($password)) {
         $result = true;
-    }else{
+    } else {
         $result = false;
     }
 
     return $result;
 }
 
-function loginUser($email, $pwdUser){
+function loginUser($email, $pwdUser)
+{
     $uidExists = userExists($email);
 
-    if ($uidExists === false ) {
+    if ($uidExists === false) {
         header("location: ../login.php?error=invalidEmail");
         exit();
     }
@@ -102,7 +104,7 @@ function loginUser($email, $pwdUser){
     if ($checkPwd === false) {
         header("location: ../login.php?error=invalidPassword");
         exit();
-    }else if($checkPwd === true ){
+    } else if ($checkPwd === true) {
         session_start();
         $_SESSION["account_id"] = $uidExists["account_id"];
         $_SESSION["user_name"] = $uidExists["user_name"];
@@ -111,7 +113,6 @@ function loginUser($email, $pwdUser){
         header("location: ../index.php");
         exit();
     }
-
 }
 function call_everything_from_db($table)
 {
@@ -136,27 +137,27 @@ function add_category($category_name)
     exit();
 }
 
-function buy_ticket(){
-    
+function buy_ticket()
+{
+
     include "./pdo.php";
 
     $sql = "UPDATE ticket_category_table SET quantity = quantity - 1";
     $db->query($sql);
-    
+
     header("location: ../index.php");
     exit();
-
-
 }
 
-function ticket_to_cart($add_this){
+function ticket_to_cart($add_this)
+{
     include "./pdo.php";
-    session_start();
+     
 
-    $sql = "INSERT INTO cart_table values(".$add_this.", ".$_SESSION["account_id"].", 1);";
+
+    $sql = "INSERT INTO cart_table values(" . $add_this . ", " . $_SESSION["account_id"] . ", 1);";
     $db->query($sql);
-    
-    header("location: ../index.php");
-    exit();
 
+    header("location: ../ticket_category.php");
+    exit();
 }
