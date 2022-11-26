@@ -66,7 +66,7 @@ function print_event($row2) {
     echo $description;
     echo $time_of_event;
     echo $address;
-    echo "<form action='ticket_category.php' method='POST'>";
+    echo "<form action='ticket_category.php' method='GET'>";
     echo "<button value=".$event_id." name='event'>View Event</button>";
     echo "</form>";
     echo "</div>";

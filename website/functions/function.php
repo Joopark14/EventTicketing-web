@@ -149,13 +149,12 @@ function buy_ticket()
     exit();
 }
 
-function ticket_to_cart($add_this)
+function ticket_to_cart($card_id)
 {
     include "./pdo.php";
-     
+    $account_id = $_SESSION["account_id"];
 
-
-    $sql = "INSERT INTO cart_table values(" . $add_this . ", " . $_SESSION["account_id"] . ", 1);";
+    $sql = "INSERT INTO cart_table values($card_id, $account_id, 1);";
     $db->query($sql);
 
     header("location: ../ticket_category.php");

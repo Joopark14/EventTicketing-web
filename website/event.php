@@ -2,7 +2,7 @@
     include "navigation.php";
     include "./functions/pdo.php";
     include "./functions/event_func/search.php";
-    $check = $_POST["event_cat"];
+    $check = $_GET["event_cat"];
 
     //Gets the possible categories from the database. And checks if the user got here the right way
     $get_categories = "SELECT category_id FROM category_table;";
