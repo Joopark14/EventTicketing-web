@@ -157,6 +157,7 @@ function ticket_to_cart($card_id)
     $sql = "INSERT INTO cart_table values($card_id, $account_id, 1);";
     $db->query($sql);
 
-    header("location: ../ticket_category.php");
+    //header("location: ../index.php");
+    header('Location: '.$_SERVER['HTTP_REFERER']); //determins which page user came from, which gets reset at every page
     exit();
 }
