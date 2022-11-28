@@ -49,6 +49,36 @@
 
                 <div class="events__cards-box">
 
+                <div class="events__card">
+                        <div class="events__card-img events__card-img--first">
+
+                            <h3 class="events__card-title">Sports</h3>
+
+                            <a href="#"><button class="events__card-btn">Details</button></a>
+
+                        </div>
+                    </div>
+
+                    <div class="events__card">
+                        <div class="events__card-img events__card-img--second">
+
+                            <h3 class="events__card-title">Music</h3>
+
+                            <a href="#"><button class="events__card-btn">Details</button></a>
+
+                        </div>
+                    </div>
+
+                    <div class="events__card">
+                        <div class="events__card-img events__card-img--third">
+
+                            <h3 class="events__card-title">Travelling</h3>
+
+                            <a href="#"><button class="events__card-btn">Details</button></a>
+
+                        </div>
+                    </div>
+
                 <?php 
                         $sql = "SELECT * FROM category_table;";
                         $result = $db->query($sql);
@@ -57,9 +87,9 @@
                                 <div class='events__card-img events__card-img--first'>
     
                                     <h3 class='events__card-title'>".$row[1]."</h3>
-    
-                                    <a href='#'><button class='events__card-btn'>Details</button></a>
-    
+                                    <form action='event.php' method='POST'>
+                                        <button class='events__card-btn' name='event_cat' value=".$row[0].">Details</button>
+                                    </form
                                 </div>
                             </div> ";
                         }
@@ -69,5 +99,36 @@
             </div>
 
         </section>
+
+        <!-- contact form  -->
+
+        <div class="contact">
+            <div class="wrapper">
+
+                        <form class="contact__form" action="sendemail.php" method="POST">
+
+                            <label for="name" type="text">Name:</label>
+                            <input type="text" id="name" name="name">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" name="email">
+                            <label for="subject" type="text"></label>
+                            <input type="text" id="email" name="subject">
+                            <label for="message">Message: </label>
+                            <textarea name="message" id="message" type="text" cols="30" rows="10"></textarea>
+                            <button type="submit" name="submit">Send</button>
+                        </form>
+            </div>
+        </div>
+
+
+        
     </main>
+
+    
+    
+    <!-- footer  -->
+
+    <footer class="footer">
+        <p class="footer__text">&copy; Tickify | 2022</p>
+    </footer>
 
