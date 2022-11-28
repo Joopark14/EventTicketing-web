@@ -26,43 +26,43 @@
         <div class="divider-event"></div>
         <div>
             <div class="search-filter">
-                <form method="POST">
-                    <input type="text" name="search" placeholder="Search for event, cities, dates..." class="search"<?php if(isset($_POST["search"])){?>value=<?=$_POST["search"]?><?php }?>>
-                    <input type="hidden" name="sort_by" value=<?php if(isset($_POST["sort_by"])){?><?= $_POST["sort_by"]?><?php }?>>
-                    <input type="hidden" name="order_by" value=<?php if(isset($_POST["order_by"])){?><?= $_POST["order_by"]?><?php }?>>
-                    <button type="submit" name="event_cat" value=<?= $_POST["event_cat"];?> class="search-button">Search</button>
+                <form method="GET">
+                    <input type="text" name="search" placeholder="Search for event, cities, dates..." class="search"<?php if(isset($_GET["search"])){?>value=<?=$_GET["search"]?><?php }?>>
+                    <input type="hidden" name="sort_by" value=<?php if(isset($_GET["sort_by"])){?><?= $_GET["sort_by"]?><?php }?>>
+                    <input type="hidden" name="order_by" value=<?php if(isset($_GET["order_by"])){?><?= $_GET["order_by"]?><?php }?>>
+                    <button type="submit" name="event_cat" value=<?= $_GET["event_cat"];?> class="search-button">Search</button>
                 </form>
             </div>
         </div>
         <div class="filter-choice">
-            <form method="POST" class="choice">
+            <form method="GET" class="choice">
                 <input type="radio" name="sort_by" id="first" value="none" checked>
                 <label for="first">None</label>
-                <input type="radio" name="sort_by" id="second" value="price"<?php if(isset($_POST["sort_by"]) && $_POST["sort_by"] == "price"){?>checked<?php }?>>
+                <input type="radio" name="sort_by" id="second" value="price"<?php if(isset($_GET["sort_by"]) && $_GET["sort_by"] == "price"){?>checked<?php }?>>
                 <label for="second">Price</label>
-                <input type="radio" name="sort_by" id="third" value="amount"<?php if(isset($_POST["sort_by"]) && $_POST["sort_by"] == "amount"){?>checked<?php }?>>
+                <input type="radio" name="sort_by" id="third" value="amount"<?php if(isset($_GET["sort_by"]) && $_GET["sort_by"] == "amount"){?>checked<?php }?>>
                 <label for="third">Tickets</label>
-                <input type="radio" name="sort_by" id="fourth" value="alph" <?php if(isset($_POST["sort_by"]) && $_POST["sort_by"] == "alph"){?>checked<?php }?>>
+                <input type="radio" name="sort_by" id="fourth" value="alph" <?php if(isset($_GET["sort_by"]) && $_GET["sort_by"] == "alph"){?>checked<?php }?>>
                 <label for="fourth">A-Z</label>
                 <div class="divider-vertical"></div>
                 <input type="radio" name="order_by" id="fifth" value="asc" checked >
                 <label for="fifth">asc</label>
-                <input type="radio" name="order_by" id="sixth" value="desc" <?php if(isset($_POST["order_by"]) && $_POST["order_by"] == "desc"){?>checked<?php }?>>
+                <input type="radio" name="order_by" id="sixth" value="desc" <?php if(isset($_GET["order_by"]) && $_GET["order_by"] == "desc"){?>checked<?php }?>>
                 <label for="sixth">desc</label>
-                <input type="hidden" name="search" value=<?php if(isset($_POST["search"])){?><?=$_POST["search"]?><?php }?>>
-                <button type="submit" name="event_cat" value="<?= $_POST["event_cat"];?>" class="filter-button">Sort by</button>
+                <input type="hidden" name="search" value=<?php if(isset($_GET["search"])){?><?=$_GET["search"]?><?php }?>>
+                <button type="submit" name="event_cat" value="<?= $_GET["event_cat"];?>" class="filter-button">Sort by</button>
             </form>
         </div>
         
         <div class="divider-event"></div>
             <?php
-            if (isset($_POST["search"])) {
-                $search = $_POST["search"];
+            if (isset($_GET["search"])) {
+                $search = $_GET["search"];
             } else {
                 $search = null;
             }
-            if (isset($_POST["sort_by"]) && isset($_POST["order_by"])) {
-                search_display($check, $db, $search, $_POST["sort_by"], $_POST["order_by"]);        
+            if (isset($_GET["sort_by"]) && isset($_GET["order_by"])) {
+                search_display($check, $db, $search, $_GET["sort_by"], $_GET["order_by"]);        
             } else {
                 search_display($check, $db, $search);
             }
