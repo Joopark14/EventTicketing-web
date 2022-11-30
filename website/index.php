@@ -87,49 +87,23 @@ include "./functions/function.php"
 
                     <div class="events__cards-box">
 
-                        <div class="events__card">
-                            <div class="events__card-img events__card-img--first">
-
-                                <h3 class="events__card-title">Sports</h3>
-
-                                <a href="#"><button class="events__card-btn">Details</button></a>
-
-                            </div>
-                        </div>
-
-                        <div class="events__card">
-                            <div class="events__card-img events__card-img--second">
-
-                                <h3 class="events__card-title">Music</h3>
-
-                                <a href="#"><button class="events__card-btn">Details</button></a>
-
-                            </div>
-                        </div>
-
-                        <div class="events__card">
-                            <div class="events__card-img events__card-img--third">
-
-                                <h3 class="events__card-title">Travelling</h3>
-
-                                <a href="#"><button class="events__card-btn">Details</button></a>
-
-                            </div>
-                        </div>
-
-                        <?php
-                        $result = call_everything_from_db("category_table");
-                        foreach ($result as $key => $value) : ?>
+                <?php 
+                        $sql = "SELECT * FROM category_table;";
+                        $result = $db->query($sql);
+                        while($row = $result->fetch()) {?>
                             <div class='events__card'>
                                 <div class='events__card-img events__card-img--first'>
-
-                                    <h3 class='events__card-title'><?= $value; ?></h3>
-
-                                    <a href='#'><button class='events__card-btn'>Details</button></a>
-
+    
+                                    <h3 class='events__card-title'><?= $row[1]?></h3>
+                                    <form action='event.php' method='GET'>
+                                        <button class='events__card-btn' name='event_cat' value="<?= $row[0]?>">Details</button>
+                                    </form>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                            
+                        <?php }?>
+                        
+                    ?>
 
                     </div>
                 </div>

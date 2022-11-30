@@ -1,11 +1,10 @@
 <?php
 if(isset($_POST["submit"])){
-
+    require_once 'function.php';
+    
     $email = $_POST["uid"];
     $pwdUser = $_POST["pwd"];
 
-    require_once 'pdo.php';
-    require_once 'function.php';
     
     if (emptyInputLogin($email,$pwdUser) !== false) {
         header("location: ../login.php?error=emptyInput");
@@ -15,7 +14,7 @@ if(isset($_POST["submit"])){
         header("location: ../login.php?=invalidPassword");
         exit();
     }
-
+    
     loginUser($email, $pwdUser);
 
 }else{

@@ -1,0 +1,25 @@
+.left-container{
+    width: 120vh;
+        
+    background-color: #fff;
+    margin: auto;
+    margin-top: 100px;
+    
+   
+}
+
+.text{
+    text-align: center;
+    font-size: 20px;
+    color: #00171f;
+    margin-right: 700px;
+}
+
+
+.right-container{
+    border-left: 0.18em dashed #fff ;
+    width: 100vh;
+    float:right;
+    background-color: red;
+    margin-left: 250px;
+}
