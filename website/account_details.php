@@ -1,9 +1,10 @@
 <?php
     include "./navigation.php"
 ?>
+ <link rel="stylesheet" href="./styles/account_details.css">
+ 
 <head>
     <title> Account details</title>
-    <link rel="stylesheet" href="./styles/account_details.css">
 </head>
 <body>
     <div class="account_details">
@@ -22,10 +23,7 @@
                 echo $_SESSION["rights"]
             ?>
             <p>Password</p>
-            <!-- Password visibilty -->
-            <!--<input type="password" value="FakePSW" id="myInput"> -->
-            <p>Change Password</p>
-            
+
 
         </form>
     </div>

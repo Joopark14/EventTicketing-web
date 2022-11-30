@@ -116,7 +116,7 @@ function loginUser($email, $pwdUser)
 }
 function call_everything_from_db($table)
 {
-    include "./pdo.php";
+    include "/var/www/html/functions/pdo.php";
     $array = [];
     $sql = "SELECT * from $table";
     foreach ($db->query($sql) as $row) {
@@ -128,7 +128,8 @@ function call_everything_from_db($table)
 
 function add_category($category_name)
 {
-    include "./pdo.php";
+    include "/var/www/html/functions/pdo.php";
+    
     //SQL constructor
     if (!$stmt_add_category = $db->prepare("INSERT INTO category_table VALUES(DEFAULT, ?);")) {
         exit();
