@@ -31,43 +31,6 @@ include "./functions/function.php"
     <div class="header__text">
         <h1 class="header__title">Welcome to <span class="header__title-span">Tickify</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, maxime.</p>
-    </div>
-
-    <a href="#events">
-        <div class="header__icon-box">
-            <i class="material-icons header__icon">arrow_downward</i>
-        </div>
-    </a>
-
-</header>
-
-
-<main>
-    <section class="events" id="events">
-        <div class="wrapper">
-
-            <h2 class="section-title">Events</h2>
-
-
-            <div class="events__cards-box">
-
-
-                <?php
-                $result = call_everything_from_db("category_table");
-                foreach ($result as $key => $value) : ?>
-                    <div class='events__card'>
-                        <div class='events__card-img events__card-img--first'>
-
-                            <h3 class='events__card-title'><?= $value; ?></h3>
-
-                            <a href='#'><button class='events__card-btn'>Details</button></a>
-
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-
-            </div>
-        </div>
 
         <a href="#events">
             <div class="header__icon-box">
