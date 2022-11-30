@@ -154,6 +154,17 @@ function ticket_to_cart($card_id, $event)
     include "./pdo.php";
     $account_id = $_SESSION["account_id"];
     if (is_in_cart($account_id, $card_id)) {
+        $url = $_SERVER['REQUEST_URI'];
+        $url_split = preg_split("/[?|&]/", $url);
+        for ($i = 0; $i < sizeof($url_split); $i++) {
+            $check = $url_split[$i];
+            echo $check."<br>";
+            if($check == "error=alreadyInCart") {
+                header('Location: '.$_SERVER['HTTP_REFERER']);
+                exit();
+            }
+        }
+
         header('Location: '.$_SERVER['HTTP_REFERER'].'&error=alreadyInCart');
         exit();
     }

@@ -23,6 +23,9 @@ include "./functions/pdo.php";
                     <h3 class="text"><?= $row[3]; ?></h3>
                     <input type="hidden" value="<?= $row[0]; ?>" name="cart_id">
                     <input type="hidden" value="<?= $_GET["event"]; ?>" name="event">
+                    <?php if(isset($_GET["error"])) {
+                         ?><input type="hidden" value="<?= $_GET["error"]; ?>" name="error"><?php
+                    }?>
                     <button type="submit" name="add_to_cart" value="<?php $row[1]; ?>">ADD TO CART</button>
                </form>
           </div>
