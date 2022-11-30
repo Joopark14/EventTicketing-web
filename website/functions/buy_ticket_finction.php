@@ -7,7 +7,7 @@ if (!isset($_SESSION["account_id"])) {
     header("location: ../login.php");
     exit();
 } else {
-
-    ticket_to_cart($_GET["cart_id"]);
+    
+    ticket_to_cart($_GET["cart_id"], $_GET["event"]);
     // echo $_GET["add_to_cart"];
 }

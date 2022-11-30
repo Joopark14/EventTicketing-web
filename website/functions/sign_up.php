@@ -11,29 +11,29 @@ if (isset($_POST["submit"])) {
 
 
     if (emptyInput($rights, $fullName, $email, $pwd, $pwd_repeat)!==false) {
-        header("location: ../SignUp.php?error=emptyInput");
+        header("location: ../sign_up.php?error=emptyInput");
         exit();
     }
     if (invalidName($fullName)!==false) {
-        header("location: ../SignUp.php?error=invalidName");
+        header("location: ../sign_up.php?error=invalidName");
         exit();
     }
     if (invalidEmail($email) !==false) {
-        header("location: ../SignUp.php?error=invalidEmail");
+        header("location: ../sign_up.php?error=invalidEmail");
         exit();
     }
     if (pwdMatch($pwd, $pwd_repeat) !==false) {
-        header("location: ../SignUp.php?error=pwdDoNotMatch");
+        header("location: ../sign_up.php?error=pwdDoNotMatch");
         exit();
     }
     if (userExists($email) !==false) {
-        header("location: ../SignUp.php?error=userExists");
+        header("location: ../sign_up.php?error=userExists");
         exit();
     }
 
     createUser($rights, $fullName, $email, $pwd);
 
 } else {
-    header("location: ../SignUp.php");
+    header("location: ../sign_up.php");
     exit();
 }

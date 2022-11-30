@@ -66,13 +66,13 @@ function createUser($rights, $fullName, $email, $pwd)
 
     include "./pdo.php";
     if (!$stmt_create_acc = $db->prepare("INSERT INTO account_table VALUES(DEFAULT, ?, ?, ?, ?);")) {
-        header("location: ../SignUp.php?error=stmtFailed");
+        header("location: ../sign_up.php?error=stmtFailed");
         exit();
     }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
     $stmt_create_acc->execute([$fullName, $email, $hashedPwd, $rights]);
-    header("location: ../SignUp.php?error=NONE");
+    header("location: ../sign_up.php?error=NONE");
     exit();
 }
 
@@ -149,15 +149,31 @@ function buy_ticket()
     exit();
 }
 
-function ticket_to_cart($card_id)
+function ticket_to_cart($card_id, $event)
 {
     include "./pdo.php";
     $account_id = $_SESSION["account_id"];
+    if (is_in_cart($account_id, $card_id)) {
+        header('Location: '.$_SERVER['HTTP_REFERER'].'&error=alreadyInCart');
+        exit();
+    }
 
     $sql = "INSERT INTO cart_table values($card_id, $account_id, 1);";
     $db->query($sql);
 
     //header("location: ../index.php");
-    header('Location: '.$_SERVER['HTTP_REFERER']); //determins which page user came from, which gets reset at every page
+    header('Location: ../ticket_category.php?event='.$_GET["event"]); //determins which page user came from, which gets reset at every page
     exit();
+}
+
+function is_in_cart($account_id, $card_id) {
+    include "./pdo.php";
+
+    $stmt = $db->prepare("SELECT * FROM cart_table WHERE ticket_cat_id = ? AND account_id = ?;");
+    $stmt->execute([$card_id, $account_id]);
+
+    if($result = $stmt->fetch()) {
+        return true;
+    }
+    return false;
 }
