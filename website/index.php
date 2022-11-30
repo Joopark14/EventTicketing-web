@@ -69,6 +69,103 @@ include "./functions/function.php"
             </div>
         </div>
 
+        <a href="#events">
+            <div class="header__icon-box">
+                <i class="material-icons header__icon">arrow_downward</i>
+            </div>
+        </a>
 
-    </section>
-</main>
+        </header>
+
+
+        <main>
+            <section class="events" id="events">
+                <div class="wrapper">
+
+                    <h2 class="section-title">Events</h2>
+
+
+                    <div class="events__cards-box">
+
+                        <div class="events__card">
+                            <div class="events__card-img events__card-img--first">
+
+                                <h3 class="events__card-title">Sports</h3>
+
+                                <a href="#"><button class="events__card-btn">Details</button></a>
+
+                            </div>
+                        </div>
+
+                        <div class="events__card">
+                            <div class="events__card-img events__card-img--second">
+
+                                <h3 class="events__card-title">Music</h3>
+
+                                <a href="#"><button class="events__card-btn">Details</button></a>
+
+                            </div>
+                        </div>
+
+                        <div class="events__card">
+                            <div class="events__card-img events__card-img--third">
+
+                                <h3 class="events__card-title">Travelling</h3>
+
+                                <a href="#"><button class="events__card-btn">Details</button></a>
+
+                            </div>
+                        </div>
+
+                        <?php
+                        $result = call_everything_from_db("category_table");
+                        foreach ($result as $key => $value) : ?>
+                            <div class='events__card'>
+                                <div class='events__card-img events__card-img--first'>
+
+                                    <h3 class='events__card-title'><?= $value; ?></h3>
+
+                                    <a href='#'><button class='events__card-btn'>Details</button></a>
+
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- contact form  -->
+
+            <div class="contact">
+                <div class="wrapper">
+
+                    <form class="contact__form" action="sendemail.php" method="POST">
+
+                        <label for="name" type="text">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                        <label for="subject" type="text"></label>
+                        <input type="text" id="email" name="subject">
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" type="text" cols="30" rows="10"></textarea>
+                        <button type="submit" name="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </main>
+
+
+
+        <!-- footer  -->
+
+        <footer class="footer">
+            <p class="footer__text">&copy; Tickify | 2022</p>
+        </footer>
+
+        >>>>>>> da37a369ee68d6aaf79b52b359be99b4e284f75f
